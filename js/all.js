@@ -144,3 +144,14 @@ function efectoCarta(clase) {
         }
     }, 100)
 }
+function ayuda() {
+    barrido();
+    setTimeout(function(){
+        var cartas = document.getElementsByClassName("cardBack");
+        for (var j = 0; j < cartas.length; j++) {
+            cartas[j].disabled = false;
+            cartas[j].setAttribute("class", "cardBack");
+        }
+    }, tPista * 2);
+    document.getElementById("ayuda").disabled = true;
+}
