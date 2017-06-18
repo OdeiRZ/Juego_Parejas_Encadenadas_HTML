@@ -182,3 +182,30 @@ function comprobarGanador() {
 		document.getElementById("textoVineta").innerHTML = "!Ánimo<br/> Ya sólo te quedan<br/> "+ (numBotones - (document.getElementsByName("correcto").length / 2)) +" Parejas más ¡";
 	}
 }
+function finJuego(mensaje) {
+    clearInterval(repetidor);
+    if (typeof mensaje === 'undefined') {
+        reproduceAudio("moguri-error2");
+        document.getElementById("avatar").className = "temblarAvatar";
+        mensaje = "La Próxima<br/>vez Seguro que<br/>tienes más Suerte";
+    } else {
+        reproduceAudio("ganar");/*document.getElementById("imgFin").src = "img/ganar.png";*/
+        document.getElementById("avatar").className = "aciertoAvatar ganarAvatar";
+		document.getElementById("vineta").className = "ganarCaja";
+    }
+	auxAvatar = -1;
+    document.getElementById("textoVineta").innerHTML = mensaje;
+    inicializar(numBotones, tPista);
+    document.getElementById("empezar").disabled = false;
+    document.getElementById("ayuda").disabled = true;
+    document.getElementById("finalizar").disabled = true;
+    document.getElementById('tiempo').innerHTML = horas + ":" + minutos + ":" + segundos;
+
+    for (var i = 0; i < v.length; i++) {
+        var carta = document.getElementById(i);
+        carta.style.backgroundImage = "";
+        carta.className = "cardBack";
+        carta.name = "cardBack";
+        carta.disabled = true;
+    }
+}
