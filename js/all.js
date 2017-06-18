@@ -64,3 +64,23 @@ function comienzo() {
     barrido();
     setTimeout(function(){activaJuego()},tPista + (v.length * 150));
 }
+function comprobarBoton(id) {
+    var carta = document.getElementById(id);
+    carta.className = "cardFront";
+    carta.style.backgroundImage = "url('img/" + pjs[carta.getAttribute('name')] + ".png')";
+    document.getElementById("avatar").className = null;
+    reproduceAudio("moguri-seleccion");
+
+    if (swPar) {
+        if (carta.getAttribute("name") == cartaAnterior.getAttribute("name")  &&  carta.getAttribute("id") != cartaAnterior.getAttribute("id") ) {
+			setTimeout(function(){ocultar(carta)},200);
+            swPar = !swPar;
+        } else if (carta.getAttribute("id") != cartaAnterior.getAttribute("id")){
+			setTimeout(function(){renovar(carta)},200);
+            swPar = !swPar;
+		}
+    } else {
+        cartaAnterior = carta;
+        swPar = !swPar;
+    }
+}
