@@ -165,3 +165,6 @@ function asistente() {
     auxAvatar = (auxAvatar < mensajes.length -1) ? auxAvatar + 1 : 0;
     document.getElementById("textoVineta").innerHTML = mensajes[auxAvatar];
 }
+function reproduceAudio(fichero) {
+    new Audio("rsc/"+fichero+".mp3").play();
+}
