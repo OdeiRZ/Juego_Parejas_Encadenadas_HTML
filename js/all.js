@@ -96,3 +96,13 @@ function ocultar(carta) {
     auxAvatar = -1;
     comprobarGanador();
 }
+function renovar(carta) {
+	carta.className = "cardBack";
+	cartaAnterior.className = "cardBack";
+	carta.style.backgroundImage = "";
+	cartaAnterior.style.backgroundImage = "";
+    reproduceAudio("moguri-error");
+    document.getElementById("avatar").className = "temblarAvatar";
+    document.getElementById("textoVineta").innerHTML = "Recuerda que puedes Activar la Ayuda una vez por Partida";
+    auxAvatar = 3;
+}
