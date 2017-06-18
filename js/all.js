@@ -32,3 +32,35 @@ function inicializar(numBtns, t) {
     horas = "00";
     tPista = t;
 }
+function comienzo() {
+    var k = 0;
+	document.getElementById("avatar").className = "inicioAvatar";
+	document.getElementById("vineta").className = "inicioCaja";
+    var botones = document.getElementsByName("cardBack");
+
+    v = new Array(numBotones * 2);
+    for (var i = 0; i < v.length; i++) {
+        v[i] = -1;
+    }
+
+    do {
+        var n = parseInt(Math.random() * pjs.length);
+        if (v.indexOf(n) == -1) {
+            var pos1, pos2;
+            do {
+                pos1 = parseInt(Math.random()* v.length);
+                pos2 = parseInt(Math.random()* v.length);
+            } while (v[pos1] != -1 || v[pos2] != -1 || pos1 == pos2);
+            v[pos1] = n;
+            v[pos2] = n;
+            k++;
+        }
+    } while (k < numBotones);
+
+    for (var j = v.length-1; j >= 0; j--) {
+        botones[j].name = v[j];
+    }
+
+    barrido();
+    setTimeout(function(){activaJuego()},tPista + (v.length * 150));
+}
