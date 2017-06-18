@@ -118,3 +118,8 @@ function activaJuego() {
         cartas[j].setAttribute("class", "cardBack");
     }
 }
+function barrido() {
+    enlace("cardFront");
+    reproduceAudio("bonus");
+    setTimeout(function(){enlace("cardBack efectoCarta")}, tPista);
+}
