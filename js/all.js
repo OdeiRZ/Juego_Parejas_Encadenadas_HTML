@@ -106,3 +106,15 @@ function renovar(carta) {
     document.getElementById("textoVineta").innerHTML = "Recuerda que puedes Activar la Ayuda una vez por Partida";
     auxAvatar = 3;
 }
+function activaJuego() {
+    document.getElementById("empezar").disabled = true;
+    document.getElementById("finalizar").disabled = false;
+    document.getElementById("ayuda").disabled = false;
+    repetidor = setInterval('contadorReloj()',1000);
+
+    var cartas = document.getElementsByClassName("cardBack");
+    for (var j = 0; j < cartas.length; j++) {
+        cartas[j].disabled = false;
+        cartas[j].setAttribute("class", "cardBack");
+    }
+}
