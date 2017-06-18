@@ -155,3 +155,13 @@ function ayuda() {
     }, tPista * 2);
     document.getElementById("ayuda").disabled = true;
 }
+function asistente() {
+    reproduceAudio("moguri-seleccion");
+    var mensajes = ["Bienvenido, soy<br/> tu Avatar. Pincha sobre mí para más Información",
+                    "Presiona 'E'<br/> para Empezar <br/>una nueva Partida",
+                    "Presiona 'F'<br/> para Finalizar <br/>la Partida actual",
+                    "Presiona 'R'<br/> para consultar <br/>el Record actual",
+                    "Presiona 'A'<br/> para Activar la Ayuda durante la Partida"];
+    auxAvatar = (auxAvatar < mensajes.length -1) ? auxAvatar + 1 : 0;
+    document.getElementById("textoVineta").innerHTML = mensajes[auxAvatar];
+}
