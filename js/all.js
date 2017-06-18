@@ -123,3 +123,7 @@ function barrido() {
     reproduceAudio("bonus");
     setTimeout(function(){enlace("cardBack efectoCarta")}, tPista);
 }
+function enlace(clase, name) {
+    con = 0;
+    efectoCarta(clase, name);
+}
