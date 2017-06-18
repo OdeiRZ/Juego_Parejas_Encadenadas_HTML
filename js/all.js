@@ -84,3 +84,15 @@ function comprobarBoton(id) {
         swPar = !swPar;
     }
 }
+function ocultar(carta) {
+	carta.className = "ocultaCarta";
+	cartaAnterior.className = "ocultaCarta";
+	carta.disabled = true;
+	cartaAnterior.disabled = true;
+	carta.setAttribute("name", "correcto");
+	cartaAnterior.setAttribute("name", "correcto");
+    reproduceAudio("moguri-pareja");
+    document.getElementById("avatar").className = "aciertoAvatar";
+    auxAvatar = -1;
+    comprobarGanador();
+}
