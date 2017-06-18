@@ -173,3 +173,12 @@ function consultarRecord() {
 	var mensaje = (comprobarCookie() == 0) ? "¡ Aún no se<br/> ha establecido<br/> ningún Record !" : "¡El Record</br>actual está en<br/>"+comprobarCookie()+" Segundos !";
 	document.getElementById("textoVineta").innerHTML = mensaje;
 }
+function comprobarGanador() {
+    if (document.getElementsByName("correcto").length == v.length) {
+        var tiempoSeg=(parseInt(segundos))+(parseInt(minutos)*60/100)+(parseInt(horas)*3600/10);
+		var mensaje = (comprobarCookie(tiempoSeg) != -1) ? "Batido el Record" : "Ganado la Partida";
+        finJuego("!Enhorabuena, <br/>has " + mensaje + " en " + tiempoSeg + " Segundos ¡");
+    } else {
+		document.getElementById("textoVineta").innerHTML = "!Ánimo<br/> Ya sólo te quedan<br/> "+ (numBotones - (document.getElementsByName("correcto").length / 2)) +" Parejas más ¡";
+	}
+}
