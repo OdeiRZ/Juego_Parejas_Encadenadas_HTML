@@ -168,3 +168,8 @@ function asistente() {
 function reproduceAudio(fichero) {
     new Audio("rsc/"+fichero+".mp3").play();
 }
+function consultarRecord() {
+	auxAvatar = -1;
+	var mensaje = (comprobarCookie() == 0) ? "¡ Aún no se<br/> ha establecido<br/> ningún Record !" : "¡El Record</br>actual está en<br/>"+comprobarCookie()+" Segundos !";
+	document.getElementById("textoVineta").innerHTML = mensaje;
+}
