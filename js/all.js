@@ -17,3 +17,7 @@ window.onload = function() {
         return aux;
     }
 };
+
+var pjs = ["eduard", "goku", "kenshin", "l", "lucy", "luffy", "misaki", "sakura", "spike", "levi"];
+var segundos, minutos, horas, con, tPista, swPar = false;
+var repetidor, numBotones, v, cartaAnterior, auxAvatar = 0;
