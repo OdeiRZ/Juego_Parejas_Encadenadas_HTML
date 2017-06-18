@@ -21,3 +21,14 @@ window.onload = function() {
 var pjs = ["eduard", "goku", "kenshin", "l", "lucy", "luffy", "misaki", "sakura", "spike", "levi"];
 var segundos, minutos, horas, con, tPista, swPar = false;
 var repetidor, numBotones, v, cartaAnterior, auxAvatar = 0;
+
+function inicializar(numBtns, t) {
+    document.getElementById("empezar").disabled = false;
+    document.getElementById("ayuda").disabled = true;
+    document.getElementById("finalizar").disabled = true;
+    numBotones = numBtns;
+    segundos = "00";
+    minutos = "00";
+    horas = "00";
+    tPista = t;
+}
