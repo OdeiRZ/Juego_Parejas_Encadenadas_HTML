@@ -127,3 +127,20 @@ function enlace(clase, name) {
     con = 0;
     efectoCarta(clase, name);
 }
+function efectoCarta(clase) {
+    setTimeout(function() {
+        var carta = document.getElementById(con);
+        if (carta.className != "ocultaCarta") {
+            carta.className = clase;
+            if (clase != 'cardFront') {
+                carta.style.backgroundImage = "";
+            } else {
+                carta.style.backgroundImage = "url('img/" + pjs[carta.getAttribute('name')] + ".png')";
+            }
+        }
+        con++;
+        if (con < v.length) {
+            efectoCarta(clase);
+        }
+    }, 100)
+}
