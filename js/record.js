@@ -18,3 +18,15 @@ function devolverDato(id){
 	}
 	return datoCookie;
 }
+function leerCookie(id, tiempo){							//Función usada para leer cookie y comparar su valor numérico con el recibido como parámetro, 
+	var datoCookie = devolverDato(id);						//devolviendo -1, 0 o 1 (-1 existe)no record, (0 no existe, 1 record)si record
+	if (datoCookie != 0) {
+		if (datoCookie > tiempo) {
+			crearCookie(id, tiempo, 1)
+			datoCookie = 1;
+		} else {
+			datoCookie = -1;
+		}
+	}
+	return datoCookie;
+}
