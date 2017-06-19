@@ -7,3 +7,14 @@ function crearCookie(id,valor,caducidad){					//Función usada para crear cookie
 	var expires = "expires=" + d.toGMTString();
 	document.cookie = id+"=" + valor + "; " + expires;
 }
+function devolverDato(id){
+	var datoCookie = 0, nombre = id + "=";
+	var valor = document.cookie.split(';');
+	for (var i=0; i<valor.length; i++){
+		if (valor[i].indexOf(nombre) != -1){
+			datoCookie=valor[i].substring(nombre.length, valor[i].length);
+			break;
+		}
+	}
+	return datoCookie;
+}
