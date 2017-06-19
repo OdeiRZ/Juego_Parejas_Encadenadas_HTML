@@ -30,3 +30,15 @@ function leerCookie(id, tiempo){							//Función usada para leer cookie y compa
 	}
 	return datoCookie;
 }
+function comprobarCookie(tiempo){							//Función usada comprobar si existe una cookie asociada al documento si no existe se crea con el correspondiente
+	var record;												//nuevo record, y si existe se comparan sus valores, devolviendo true o false si existe o no nuevo record
+	if (typeof tiempo === 'undefined') {
+		record = devolverDato("id");
+	} else {
+		record = leerCookie("id", tiempo);
+		if (record == 0) {
+			crearCookie("id", tiempo, 1);
+		}
+	}
+	return record;
+}
