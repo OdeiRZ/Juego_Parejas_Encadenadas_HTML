@@ -25,6 +25,9 @@ audio {
     border: 2px black solid;
     background-image: url('../img/fondo.gif');
     background-size: 100% 100%;
+    zoom: 1.1;
+    -moz-transform: scale(1.1);
+    -moz-transform-origin: 0 0;
 }
 #avatar {
     z-index: 3;
