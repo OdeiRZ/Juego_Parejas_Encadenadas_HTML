@@ -11,12 +11,16 @@ vayamos adivinando la posición de los personajes, si el jugador gana la partida
 actual, podrá introducir sus datos y se guardarán junto a su puntuación, añadiendo además efectos 
 interactivos mientras hacemos uso de la aplicación para una interacción con el usuario más satisfactoria.
 
+Para cualquier referencia relacionada con el sitio, podemos ver la aplicación desplegada
+visitando el siguiente [enlace].
+
 ## Requisitos
 - Navegador Web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
 
 ## Licencia
 Esta aplicación se ofrece bajo licencia [GPL versión 3].
 
+[enlace]: https://odeirz.github.io/Juego_Parejas_Encadenadas_HTML/public/
 [Chrome]: https://www.google.es/chrome/browser/desktop/index.html
 [Firefox]: https://www.mozilla.org/es-ES/firefox/new/
 [Opera]: http://www.opera.com/es
