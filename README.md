@@ -1,28 +1,32 @@
-Juego Parejas Encadenadas 0.9
-================================
+# Juego de Parejas Encadenadas (HTML)
 
-Aplicación desarrollada mediante JavaScript y HTML que implementa el conocido juego de las 
-parejas encadenadas con personajes famosos de anime. Permite al usuario interactuar con el juego 
-mediante una interfaz gráfica que muestra diferentes cartas con distintos personajes, 
-a su vez, se muestra un contador de intentos y el record actual de juego.
+Juego de memoria (encontrar parejas de cartas) en JavaScript y HTML, con personajes de anime, cronómetro y récord guardado en cookie.
 
-Desde el programa podremos seleccionar múltiples imágenes que se iran desbloqueando conforme
-vayamos adivinando la posición de los personajes, si el jugador gana la partida y bate el record 
-actual, podrá introducir sus datos y se guardarán junto a su puntuación, añadiendo además efectos 
-interactivos mientras hacemos uso de la aplicación para una interacción con el usuario más satisfactoria.
+## Características
 
-Para cualquier referencia relacionada con el juego, podemos ver la aplicación desplegada
-visitando el siguiente [enlace].
+- Tablero de cartas generado dinámicamente (9 parejas de 10 personajes de anime posibles: Goku, Luffy, Levi, Sakura, etc.), colocadas al azar en cada partida.
+- Vista previa de todas las cartas al empezar la partida antes de ocultarlas ("barrido" inicial).
+- Lógica de comprobación de pareja: si dos cartas volteadas coinciden se marcan como acertadas, si no, vuelven a ocultarse.
+- Botón de ayuda (una vez por partida) que vuelve a mostrar brevemente todas las cartas.
+- Avatar/asistente interactivo con mensajes de ayuda y control de la partida mediante atajos de teclado (E: empezar, F: finalizar, R: consultar récord, A: activar ayuda).
+- Cronómetro de partida y guardado del mejor tiempo en una cookie, avisando si se ha batido el récord.
+- Efectos de sonido para selección de carta, acierto, error y victoria.
 
-## Requisitos
-- Navegador Web [Chrome], [Firefox], [Opera], [Microsoft Edge], etc..
+## Tecnologías
+
+- HTML5
+- CSS3
+- JavaScript vanilla (manipulación del DOM, `setTimeout`/`setInterval`, cookies y `Audio`, sin frameworks)
+
+## Instalación / Cómo ejecutarlo
+
+No requiere instalación ni servidor:
+
+1. Clona el repositorio.
+2. Abre `public/index.html` directamente en un navegador (Chrome, Firefox, Edge, etc.).
+
+Ejercicio académico que practica la generación dinámica de elementos del DOM, la gestión de estado de un juego con temporizadores y el uso de cookies para persistir un récord.
 
 ## Licencia
-Esta aplicación se ofrece bajo licencia [GPL versión 3].
 
-[enlace]: https://odeirz.github.io/Juego_Parejas_Encadenadas_HTML/public/
-[Chrome]: https://www.google.es/chrome/browser/desktop/index.html
-[Firefox]: https://www.mozilla.org/es-ES/firefox/new/
-[Opera]: http://www.opera.com/es
-[Microsoft Edge]: https://www.microsoft.com/es-es/windows/microsoft-edge
-[GPL versión 3]: https://www.gnu.org/licenses/gpl-3.0.en.html
+GPL versión 3 (ver archivo [LICENSE](LICENSE)).
